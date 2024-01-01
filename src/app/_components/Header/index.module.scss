@@ -1,22 +1,16 @@
 @use '../../_css/queries.scss' as *;
 
-.header {
-  padding: var(--base) 0;
-}
-
-.wrap {
+.nav {
   display: flex;
-  justify-content: space-between;
+  gap: calc(var(--base) / 4) var(--base);
+  align-items: center;
   flex-wrap: wrap;
-  gap: calc(var(--base) / 2) var(--base);
-}
+  opacity: 1;
+  transition: opacity 100ms linear;
+  visibility: visible;
 
-.logo {
-  width: 150px;
-}
-
-:global([data-theme="light"]) {
-  .logo {
-    filter: invert(1);
+  > *{
+    text-decoration: none;
   }
 }
+
