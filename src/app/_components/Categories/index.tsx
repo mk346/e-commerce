@@ -9,9 +9,7 @@ import CategoryCard from './CategoryCard'
 // // import CategoryCard from './CategoryCard'
 import classes from './index.module.scss'
 
-// { categories }: { categories: Category[] }
-
-const Categories = ({ categories }: { categories: Category }) => {
+const Categories = ({ categories }: { categories: Category[] }) => {
   return (
     <section className={classes.container}>
       <div className={classes.titleWrapper}>
@@ -19,10 +17,9 @@ const Categories = ({ categories }: { categories: Category }) => {
         <Link href="/products">Show All</Link>
       </div>
       <div className={classes.list}>
-        {categories.map((category) => (
-            <CategoryCard />
+        {categories.map(category => (
+          <CategoryCard key={category.id} category={category} />
         ))}
-
       </div>
     </section>
     // <section className={classes.container}>
