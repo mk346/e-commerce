@@ -47,6 +47,7 @@
   h2 {
     font-size: 70px;
     margin: 32px 0;
+    // color: hsl(0, 10%, 88%);
 
     @include mid-break {
       font-size: 48px;
@@ -63,6 +64,7 @@
 
   p {
     font-size: 30px;
+    // color: #d8a455;
 
     @include mid-break {
       font-size: 24px;
@@ -73,6 +75,7 @@
     }
   }
 }
+
 
 .links {
   list-style: none;
